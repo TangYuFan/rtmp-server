@@ -1,0 +1,17 @@
+1.red5
+配置 red5-server/red5.bat 的 JAVA_HOME
+配置 red5-server/conf/red5.properties 的 rtmp.host
+启动
+red5.exe start
+
+2.ffmpeg
+ffmpeg.exe -rtsp_transport tcp -i rtsp://192.168.1.125:556/0 -f flv -r 15  -an rtmp://192.168.1.201/live/pushFlow
+-i : 相机地址
+-an : red5地址
+
+3.web
+java -jar web-0.0.1-SNAPSHOT.jar
+
+4.
+http://localhost:8076/index.html?src=rtmp://192.168.1.201/live/pushFlow
+src：red5地址
