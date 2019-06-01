@@ -87,7 +87,7 @@ public class rtsp2rtmp {
     //java -jar rtsp2rtmp-0.0.1-SNAPSHOT.jar rtsp://192.168.1.125:556/0 rtmp://192.168.1.201/live/pushFlow
     public static void main(String[] args) throws Exception {
         String in = "rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov";
-        String out = "rtmp://192.168.1.201/live/pushFlow";
+        String out = "rtmp://127.0.0.1/live/pushFlow";
         System.out.println("in:"+in);
         System.out.println("out:"+out);
         recordPush(in, out, 100);
