@@ -1,0 +1,16 @@
+(1)red5
+镜像
+docker pull mondain/red5
+容器
+docker run --name red5 -d -p 5080:5080 -p 1935:1935 mondain/red5
+推流地址
+rtmp://host/live/name
+
+(2)nginx-rtmp
+容器
+docker pull hub.c.163.com/ychdev/nginx-rtmp:latest
+镜像
+docker run --name nginx-rtmp -d -it -p 1935:1935 -p 8000:80 --rm alfg/nginx-rtmp
+推流地址
+rtmp://host/stream/name
+  
